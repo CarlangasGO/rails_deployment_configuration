@@ -1,0 +1,8 @@
+# Sidekiq Configuration
+---
+development:
+  :logfile: ./log/sidekiq.log
+  :verbose: true
+  :pidfile: ./tmp/sidekiq.pid
+  :poll_interval: 30
+  :concurrency: 150

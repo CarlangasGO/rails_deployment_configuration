@@ -1,0 +1,28 @@
+
+[Unit]
+Description=Puma HTTP Server
+After=network.target
+
+[Service]
+# Foreground process (do not use --daemon in ExecStart or config.rb)
+Type=simple
+
+# Preferably configure a non-privileged user
+User=root
+Group=root
+
+# Specify the path to your puma application root
+WorkingDirectory=/var/www/app
+
+# Helpful for debugging socket activation, etc.
+Environment="PATH=/usr/local/rvm/gems/ruby-2.7.1@app/bin:/usr/local/rvm/gems/ruby-2.7.1@global/bin:/usr/local/rvm/rubies/ruby-2.7.1/bin:/usr/local/rvm/bin:/root/.nvm/versions/node/v10.10.0/bin:/sbin:/bin:/usr/sbin:/usr/bin"
+
+EnvironmentFile=/var/www/app/.env
+##/root/.nvm/versions/node/v4.8.7/bin/node
+
+# The command to start Puma
+ExecStart=/usr/local/rvm/wrappers/ruby-2.7.1@app/bundle exec puma -C /var/www/app/config/puma.rb
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
