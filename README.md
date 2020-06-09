@@ -4,6 +4,9 @@
     mv system/puma.service /etc/systemd/system/
     
     systemctl enable puma.service
+    systemctl start puma
+    systemctl status puma
+
 
     
     mv system/nginx.conf /etc/nginx/site-enable/
