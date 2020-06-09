@@ -3,6 +3,9 @@
 
     mv system/puma.service /etc/systemd/system/
     
+    systemctl enable puma.service
+
+    
     mv system/nginx.conf /etc/nginx/site-enable/
     
     .env #Cambiar las variables que se usaran en database.yml y puma.rb
