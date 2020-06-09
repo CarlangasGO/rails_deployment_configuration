@@ -9,14 +9,14 @@ default: &default
 
 development:
   <<: *default
-  database: app_development
+  database: <%= ENV['DB_NAME'] %>_development
 
 test:
   <<: *default
-  database: app_test
+  database: <%= ENV['DB_NAME'] %>_test
 
 production:
   <<: *default
-  database: app_production
+  database: <%= ENV['DB_NAME'] %>_production
   username: app
   password: <%= ENV['APP_DATABASE_PASSWORD'] %>
