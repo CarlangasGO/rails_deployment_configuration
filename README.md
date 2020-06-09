@@ -1,6 +1,10 @@
 
 **Instrucciones**
 
+     erb2slim application.html.erb application.html.slim
+     mv application.css application.scss
+
+
     mv system/puma.service /etc/systemd/system/
     
     systemctl enable puma.service
