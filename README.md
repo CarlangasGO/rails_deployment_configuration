@@ -7,6 +7,11 @@
     
     .env #Cambiar las variables que se usaran en database.yml y puma.rb
 
+**RUBY GEMSET RVM**
+
+    rvm --create --ruby-version use 2.7.1@app
+
+
 **Boostrap**
 
     yarn add bootstrap@4.5.0 jquery popper.js
