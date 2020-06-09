@@ -11,6 +11,14 @@
 
     yarn add bootstrap@4.5.0 jquery popper.js
 
+**PG**
+
+    sudo -u postgres createuser -s supercarlos
+    sudo -u postgres psql
+    
+    \password supercarlos
+    \q
+
 
 **Gemfile**
 
@@ -23,17 +31,17 @@
     
     gem 'stringex
     gem 'simple_form'
-    gem "cocoon"
+    gem 'cocoon'
     gem 'html2slim'
     gem 'carrierwave'
     
     gem 'devise'
-    gem "mini_magick"
-    gem 'faraday
+    gem 'mini_magick'
+    gem 'faraday'
     
     #action background
     gem 'sidekiq'
-    gem "sidekiq-cron"
+    gem 'sidekiq-cron'
     
     #notifications
     gem 'exception_notification'
