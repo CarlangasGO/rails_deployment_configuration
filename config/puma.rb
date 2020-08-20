@@ -16,7 +16,7 @@ stdout_redirect "/var/www/#{app}/log/puma_#{app}.log", "/var/www/#{app}/log/puma
 
 bind "unix:#{app_path}/puma_#{app}.sock"
 
-workers 2
+workers 4
 
 activate_control_app "unix:#{app_path}/pumactl_#{app}.sock"
 
